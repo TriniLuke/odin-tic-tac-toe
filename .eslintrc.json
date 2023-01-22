@@ -11,7 +11,7 @@
   },
   "rules": {
     "no-unused-vars": "off",
-    "no-param-reassign": "off",
+    "no-param-reassign": "warn",
     "no-use-before-define": "off",
     "no-shadow": "off"
   }

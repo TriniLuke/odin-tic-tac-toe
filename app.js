@@ -131,12 +131,12 @@ const displayController = (() => {
 
     function selection(e) {
       const box = e.target;
-      placeMark(box, current);
+      placeMark(box);
       checkWinner();
       swapTurns();
     }
 
-    const placeMark = (box, current) => {
+    const placeMark = (box) => {
       box.textContent = current;
     };
 
