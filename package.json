@@ -1,0 +1,24 @@
+{
+  "name": "odin-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "This project was very difficult because we had to build the game using IIFEs. This was a new way of coding and it took me about 25 hours to get used to coding in this way. I was able to learn how to call and initialize IIFEs and how to properly use factory functions. This project was really fun and I am happy and excited to have learned about these concepts.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TriniLuke/odin-tic-tac-toe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TriniLuke/odin-tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/TriniLuke/odin-tic-tac-toe#readme",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
