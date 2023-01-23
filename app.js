@@ -1,12 +1,15 @@
+// create a board to hold the values of each box
 const gameBoard = (() => {
   const board = ['', '', '', '', '', '', '', '', ''];
   return { board };
 })();
 
+// factory to create a new player
 function player(name, mark) {
   return { name, mark };
 }
 
+// module and logic to create and play the game
 const displayController = (() => {
   const { board } = gameBoard;
   const boxes = document.querySelectorAll('#data-cell');
@@ -22,16 +25,19 @@ const displayController = (() => {
     });
   });
 
+  // module or IIFE to create the game
   const playGame = (() => {
     boxes.forEach((box) => {
       box.addEventListener('click', selection, { once: true });
     });
 
+    // calling the factory to create two players
     const playerOne = player('playerOne', 'X');
     const playerTwo = player('playerTwo', 'O');
 
-    let current = playerOne.mark;
+    let current = playerOne.mark; // create a variable to hold the symbol
 
+    // buttons to select which symbol goes first
     xChoice.addEventListener('click', () => {
       current = playerOne.mark;
     });
@@ -40,6 +46,7 @@ const displayController = (() => {
       current = playerTwo.mark;
     });
 
+    // logic to switching between symbols
     const swapTurns = () => {
       if (current === playerOne.mark) {
         current = playerTwo.mark;
@@ -48,6 +55,7 @@ const displayController = (() => {
       }
     };
 
+    // logic to check for a winner
     const checkWinner = () => {
       if (
         boxes[0].textContent === current
@@ -129,6 +137,7 @@ const displayController = (() => {
       }
     };
 
+    // defines the logic of what happens after a selection is made
     function selection(e) {
       const box = e.target;
       placeMark(box);
@@ -136,10 +145,12 @@ const displayController = (() => {
       swapTurns();
     }
 
+    // places a mark into each div
     const placeMark = (box) => {
       box.textContent = current;
     };
 
+    // restart the game after a round ends
     restartButton.addEventListener('click', () => {
       message.classList.remove('show');
       boxes.forEach((box) => {
