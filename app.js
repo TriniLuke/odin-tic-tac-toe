@@ -155,7 +155,7 @@ const displayController = (() => {
       message.classList.remove('show');
       boxes.forEach((box) => {
         box.textContent = '';
-        box.addEventListener('click', selection);
+        box.addEventListener('click', selection, { once: true });
         current = playerOne.mark;
       });
     });
